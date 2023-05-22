@@ -41,8 +41,6 @@ void speedCb(const std_msgs::Float32::ConstPtr& msg)
 
 int main(int argc, char** argv)
 {
-    // Initialize ROS node
-
     ros::init(argc, argv, "pid_controller");
     ros::NodeHandle nh;
 
