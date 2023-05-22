@@ -1,0 +1,10 @@
+<launch>
+
+    <!-- <node name="f170_joy" pkg="joy" type="joy_node">
+        <param name="autorepeat_rate" type="double" value="10"/>
+    </node> -->
+
+    <node name="k21_joy" pkg="k21_joy" type="k21_teleop_joy" output="screen">
+    </node>
+
+</launch>
