@@ -24,6 +24,12 @@ class K21Lifter{
         else if (msg.buttons[4] == 1){
             lifter.data = 2;
         }
+        else if (msg.buttons[7] == 1){
+            lifter.data = 3;
+        }
+        else if (msg.buttons[6] == 1){
+            lifter.data = 4;
+        }
         else{
             lifter.data = 0;
         }

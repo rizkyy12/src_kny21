@@ -9,15 +9,15 @@
     </node>
 
     <!-- <node pkg="rosserial_python" type="serial_node.py" name="slave_nano" output="screen">
-        <param name="port" value="/dev/ttyUSB2"/>
+        <param name="port" value="/dev/ttyUSB1"/>
         <param name="baud" value="115200"/>
     </node> -->
 
     <node name="k21_joy" pkg="k21_robocon_pkg" type="k21_joy" output="screen"></node>
     <node name="joy_node" pkg="joy" type="joy_node" output="screen"></node>
     <node name="k21_shooter" pkg="k21_robocon_pkg" type="k21_shooter" output="screen"></node>
-    <!-- <node name="k21_led" pkg="k21_robocon_pkg" type="k21_led" output="screen"></node> -->
-    <!-- <node name="k21_adjuster" pkg="k21_robocon_pkg" type="k21_adjuster" output="screen"></node>
-    <node name="k21_lifter" pkg="k21_robocon_pkg" type="k21_lifter" output="screen"></node> -->
+    <node name="k21_led" pkg="k21_robocon_pkg" type="k21_led" output="screen"></node>
+    <node name="k21_adjuster" pkg="k21_robocon_pkg" type="k21_adjuster" output="screen"></node>
+    <!-- <node name="k21_lifter" pkg="k21_robocon_pkg" type="k21_lifter" output="screen"></node>  -->
 
 </launch>
