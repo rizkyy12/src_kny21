@@ -15,15 +15,18 @@ class K21Shooter{
         K21Shooter(ros::NodeHandle *nh){
             shooter_pub = nh->advertise<std_msgs::Int32>("/shooter", 10);
             feeder_pub = nh->advertise<std_msgs::Int32>("/feeder", 10);
-            joy_shooter = nh->subscribe("/joy", 10, &K21Shooter::lifterCb, this);
+            joy_shooter = nh->subscribe("/joy", 10, &K21Shooter::shooterCb, this);
             joy_feeder = nh->subscribe("/joy", 10, &K21Shooter::feederCb, this);
         }
 
-    void lifterCb(const sensor_msgs::Joy& msg){
+    void shooterCb(const sensor_msgs::Joy& msg){
         std_msgs::Int32 shooter;
         
         if (msg.buttons[2] == 1){
             shooter.data = 1;
+        }
+        else if (msg.buttons[0] == 1){
+            shooter.data = 2;
         }
         else{
             shooter.data = 0;
