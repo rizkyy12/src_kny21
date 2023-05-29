@@ -28,6 +28,9 @@ class K21Shooter{
         else if (msg.buttons[0] == 1){
             shooter.data = 2;
         }
+        else if (msg.buttons[1] == 1){
+            shooter.data = 3;
+        }
         else{
             shooter.data = 0;
         }
