@@ -23,11 +23,18 @@ class K21Lifter{
         else if (msg.buttons[4] == 1){
             lifter.data = -1;
         }
+        else if (msg.buttons[7] == 1){
+            lifter.data = 2;
+        }
+        else if (msg.buttons[6] == 1){
+            lifter.data = -2;
+        }
         else{
             lifter.data = 0;
         }
         lifter_pub.publish(lifter);
     }
+
 
 };
 
